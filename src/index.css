@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+   
+  font-family: "HackedRegular"; 
+  
+  src: url("./assets/\ fonts/HACKED.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+  } 

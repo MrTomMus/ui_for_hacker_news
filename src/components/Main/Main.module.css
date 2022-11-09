@@ -1,0 +1,10 @@
+.container {
+    width: 1000px;
+    margin: 10px auto 0 auto;
+}
+
+.test {
+    width: 1000px;
+    height: 100px;
+    background: #cdebf4;
+}
