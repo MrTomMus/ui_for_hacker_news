@@ -10,11 +10,12 @@ const PageNews = () => {
         <div className={classes.logo_comments}>
             <img src={mainLogo} alt="" />
             <div className={classes.comments}>
-                <span>dasdasdasdsdadas</span>
+                <span>sdasdsad dsafsaf dfdsgdfgafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdsgdfgafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdfsdf</span>
             </div>
             <div>
-                <span>Комментарии</span>
+                <span className={classes.logo_comments_comments}>Комментарии(0)</span>
             </div>
+            
         </div>
     )
     );

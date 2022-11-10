@@ -14,7 +14,7 @@ const MainScreen = (props) => {
             <div className={classes.post}>
                 <div className={classes.post_title}>
                     <img src={newsLogo} alt="newslogo" />
-                    <h2>Lfsdfdsfdsf</h2>
+                    <h2>sdasdsad dsafsaf dfdsgdfsdasdsad dsafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdfsdfg dfsdfsdf</h2>
                 </div>
                 <div className={classes.post_author}>
                     <img src={authorLogo} alt="authorlogo" />
