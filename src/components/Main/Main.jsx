@@ -8,7 +8,7 @@ const Main = () => {
         <div className={classes.main}>
             <div className={classes.container}>
                 <MainScreen/>
-                <PageNews />
+                {/* <PageNews /> */}
             </div>
         </div>
     )

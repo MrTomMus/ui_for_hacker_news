@@ -38,7 +38,7 @@ const PageNews = () => {
                     </div>                   
                 </div>
                 <div className={classes.pagenews_comment}>
-                    <span>счетчик комментариев</span>
+                    <span>счетчик комментариев({comm.length})</span>
                 </div>
             </div>
             <div className={classes.button_comments}>
