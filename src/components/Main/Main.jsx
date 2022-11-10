@@ -1,13 +1,12 @@
 import React from "react";
+import MainScreen from "./<MainScreen/MainScreen";
 import classes from './Main.module.css';
 
 const Main = () => {
     return (
         <div className={classes.main}>
             <div className={classes.container}>
-                <div className={classes.test}>
-
-                </div>
+                <MainScreen/>
             </div>
         </div>
     )
