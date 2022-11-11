@@ -6,7 +6,7 @@ import Main from './components/Main/Main';
 
 function App() {
   
-  return (
+  return ( 
     <div className={classes.wrapper}>
       <Header/>
       <Main/> 

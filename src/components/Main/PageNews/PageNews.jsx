@@ -1,6 +1,7 @@
 import React from "react";
 import classes from './PageNews.module.css';
 import mainLogo from '../../../assets/img/hacker-logo.png'
+import { Link } from "react-router-dom";
 
 const PageNews = () => {
 
@@ -10,7 +11,7 @@ const PageNews = () => {
         <div className={classes.logo_comments}>
             <img src={mainLogo} alt="" />
             <div className={classes.comments}>
-                <span>sdasdsad dsafsaf dfdsgdfgafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdsgdfgafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdfsdf</span>
+                <span>sdasdsad dsafsaf dfdsgdfgafsaf dfdsgdfg </span>
             </div>
             <div>
                 <span className={classes.logo_comments_comments}>Комментарии(0)</span>
@@ -24,7 +25,7 @@ const PageNews = () => {
         <div className={classes.pagenews_wrapper}>
             <div className={classes.pagenews}>
                 <div className={classes.pagenews_title}>
-                    <h2>test</h2>
+                    <h2>Тут будет новость</h2>
                 </div>
                 <div className={classes.pagenews_author}>
                     <span>author</span>
@@ -45,6 +46,7 @@ const PageNews = () => {
                 <button>Обновить комментарии</button>
             </div>
             {comment}
+            <div><a href="/">Назад</a></div>
         </div>
     )
 }
