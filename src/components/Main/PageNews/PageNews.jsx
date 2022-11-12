@@ -1,7 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import classes from './PageNews.module.css';
 import Comments from './Сomments/Comments.jsx';
 import comCounter from './Сomments/Comments.jsx'
+
 
 
 const PageNews = () => {
@@ -31,7 +33,7 @@ const PageNews = () => {
                 <button>Обновить комментарии</button>
             </div>
             <Comments/>
-            <div><a href="/">Назад</a></div>
+            <div><NavLink to="/">Назад</NavLink></div>
         </div>
     )
 }
