@@ -1,7 +1,7 @@
 import React from "react";
 import classes from '../Header/Header.module.css';
 import headerLogo from '../../assets/img/header-logo1.png'
-import { useEffect } from "react";
+
 
 const Header = () => {
 

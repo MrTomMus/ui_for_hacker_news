@@ -2,7 +2,7 @@ import React from "react";
 import MainScreen from "./<MainScreen/MainScreen";
 import classes from './Main.module.css';
 import PageNews from "./PageNews/PageNews";
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Main = () => {
     return (

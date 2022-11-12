@@ -4,14 +4,18 @@ import newsLogo from '../../../assets/img/news.png'
 import authorLogo from '../../../assets/img/author.png'
 import scopeLogo from '../../../assets/img/scope.png'
 import timeLogo from '../../../assets/img/time.png'
-import { Link } from "react-router-dom";
  
-const MainScreen = (props) => {
+const MainScreen = () => {
+    
+   
+
+
+
 
     let arr = [1,2,3,4,5,6];
 
-    let post = arr.map((e) => (
-        <a href="/2" className={classes.posts_link}>
+    let post = arr.map((e, id) => (
+        <a href="/2" key={e} className={classes.posts_link} onClick={()=> {console.log(id)}}>
             <div className={classes.posts}>
                 <div className={classes.post}>
                     <div className={classes.post_title}>
