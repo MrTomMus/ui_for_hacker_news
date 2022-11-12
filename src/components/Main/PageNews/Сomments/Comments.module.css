@@ -1,0 +1,52 @@
+.logo_comments {
+    height: 100%;
+    background: #cdebf4;
+    margin: 0 0 10px 0;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo_comments img {
+    width: 50px;
+    height: 50px;
+    margin: 5px 5px 5px 5px;
+}
+
+.logo_comments_comments {
+    font-size: 12px;
+    align-items: flex-end;
+    cursor: pointer;
+    
+}
+
+.logo_comments_comments:hover {
+    text-decoration: underline;
+    
+}
+
+.comments span {
+    padding: 0 10px 0 10px;
+}
+
+.comments {
+    width: 75%;
+    height: 100%;
+}
+
+.comments::before{
+    content: '<!--';
+    font-size: 20px;
+    text-align: start;
+    margin: 0 0 0 10px;
+    font-weight: bold;
+}
+
+.comments::after {
+    content: '-->';
+    font-size: 20px;   
+    text-align: end;
+    margin: 0 10px 10px 0;
+    font-weight: bold;
+}
