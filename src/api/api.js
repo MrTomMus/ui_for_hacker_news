@@ -18,3 +18,11 @@ export function getNews(newsId) {
             })
 }
 
+export function getComments(newsId) {
+    return axios
+            .get(`https://hacker-news.firebaseio.com/v0/item/${newsId}.json?print=pretty`)
+            .then(data => {
+                return data
+            })
+}
+

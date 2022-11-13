@@ -2,15 +2,15 @@ import React from "react";
 import classes from './Comments.module.css';
 import mainLogo from '../../../../assets/img/main-logo.png'
 
-const Comments = () => {
+const Comments = (props) => {
 
-    let comCounter = [1,2,3,4,5,6];
+    let comments = props.comments.usersNews.main.commentsParent
 
-    let comment = comCounter.map((e) => (
+    let comment = comments.map((e) => (
         <div key={e} className={classes.logo_comments}>
             <img src={mainLogo} alt="" />
             <div className={classes.comments}>
-                <span>sdasdsad dsafsaf dfdsgdfgafsaf dfdsgdfg </span>
+                <span>{e}</span>
             </div>
             <div>
                 <span className={classes.logo_comments_comments}>Комментарии(0)</span>

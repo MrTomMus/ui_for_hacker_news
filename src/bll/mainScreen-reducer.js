@@ -1,4 +1,4 @@
-const SET_NEWS = 'SET-NEWS';
+const SET_USER_NEWS = 'SET-USER_NEWS';
 
 let inicialState = {
     newsPosts: []
@@ -6,10 +6,10 @@ let inicialState = {
 
 const mainScreenReducer = (state = inicialState, action) => {
     switch(action.type){
-        case SET_NEWS: {
+        case SET_USER_NEWS: {
             return {
                 ...state,
-                newsPosts: [action.data]
+                userNews: [action.data]
             }
         }
         default: {
@@ -19,9 +19,9 @@ const mainScreenReducer = (state = inicialState, action) => {
     
 }
 
-export let setNews = (data) => {
+export let setUserNews = (data) => {
     return {
-        type: SET_NEWS, data
+        type: SET_USER_NEWS, data
     }
 }
 

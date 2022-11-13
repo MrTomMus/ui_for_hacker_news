@@ -36,9 +36,15 @@
     margin: 0 0 0 50px; 
 }
 
+
+
 .pagenews_link_date {
     display: flex;
     justify-content: space-evenly;
+}
+
+.link span a {
+    text-decoration: none;
 }
 
 .pagenews_comment{

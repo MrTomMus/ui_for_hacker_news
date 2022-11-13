@@ -5,34 +5,43 @@ import authorLogo from '../../../assets/img/author.png'
 import scopeLogo from '../../../assets/img/scope.png'
 import timeLogo from '../../../assets/img/time.png'
 import { NavLink } from "react-router-dom";
+import {timeConverter} from '../../../utilits/timeConverter.js'
+import { getIdNews, getNews }  from '../../../api/api.js'
 
 
 
  
-const MainScreen = () => {
-    
-    let arr = [1,2,3,4,5,6];
+const MainScreen = (props) => {
 
-    let post = arr.map((e, id) => (
-        <NavLink to="/2" key={e} className={classes.posts_link} onClick={()=> {console.log(id)}}>
+   console.log(props)
+    
+    function giveNews(id){
+        getNews(id)
+            .then(data => {
+                props.users.setUserNews(data.data)
+            })
+    }
+   
+    let post = props.users.main.newsPosts.map((e, id) => (
+        <NavLink to="/2" key={e.id} className={classes.posts_link} onClick={() => giveNews(e.id)}>
             <div className={classes.posts}>
                 <div className={classes.post}>
                     <div className={classes.post_title}>
                         <img src={newsLogo} alt="newslogo" />
-                        <h2>sdasdsad dsafsaf dfdsgdfsdasdsad dsafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdfsdfsdasdsad dsafsaf dfdsgdfg dfsdfsdfg dfsdfsdf</h2>
+                        <h2>{e.title}</h2>
                     </div>
                     <div className={classes.post_author}>
                         <img src={authorLogo} alt="authorlogo" />
-                        <span>Автор</span>
+                        <span>{e.by}</span>
                     </div>
                     <div className={classes.post_time_score}>
                         <div className={classes.time_score_score}>
                             <img src={scopeLogo} alt="scopelogo" />
-                            <span>Рейтинг</span>
+                            <span>Score: {e.score}</span>
                         </div>
                         <div className={classes.time_score_time}>
                             <img src={timeLogo} alt="timelogo" />
-                            <span>Дата публикации</span>
+                            <span>{timeConverter(e.time)}</span>
                         </div>
                     </div>
                 </div>

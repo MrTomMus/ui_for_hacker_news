@@ -1,7 +1,7 @@
 import './App.css';
 import classes from './App.module.css'
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import MainContainer from './components/Main/Main-container.jsx';
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return ( 
     <div className={classes.wrapper}>
       <Header/>
-      <Main/> 
+      <MainContainer/> 
     </div>
   );
 }
