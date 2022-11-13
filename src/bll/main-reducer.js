@@ -35,7 +35,7 @@ const mainReducer = (state = inicialState, action) => {
         
             return {
                 ...state,
-                userNews: null,
+                userNews: 'f',
                 commentsParent: [],
             }
         }

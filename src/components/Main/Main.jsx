@@ -30,7 +30,7 @@ const Main = (props) => {
                 <Router>
                     <Switch>
                         <Route exact path={'/'} render={() => props.main.newsPosts.length == 100 ? <MainScreen users={props}/> : <div className={classes.load}>Loading...</div>}/>
-                        <Route  path={'/2'} render={() => props.main.userNews && props.main.userNews.title == props.main.userNews.title ? <PageNews usersNews={props}/> : <div className={classes.load}>Loading...</div>}/>
+                        <Route  path={'/2'} render={() => props.main.userNews && props.main.userNews.title === props.main.userNews.title ? <PageNews usersNews={props}/> : <div className={classes.load}>Loading...</div>}/>
                     </Switch>      
                 </Router>
                 </div>

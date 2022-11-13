@@ -2,7 +2,6 @@
 import { NavLink } from "react-router-dom";
 import classes from './PageNews.module.css';
 import Comments from './Сomments/Comments.jsx';
-import comCounter from './Сomments/Comments.jsx';
 import { getComments } from "../../../api/api.js";
 import {timeConverter} from '../../../utilits/timeConverter.js';
 import { useEffect } from "react";
@@ -16,8 +15,6 @@ const PageNews = (props) => {
     let userNews = props.usersNews.main.userNews;
     console.log(userNews)
     
-    // тут запрос на комментарии
-   
     useEffect(() =>{
         if(userNews.kids){
             userNews.kids.forEach((e) => {
@@ -27,7 +24,7 @@ const PageNews = (props) => {
             })
             }) 
         }  
-        return props.usersNews.deleteCommentsNews() 
+            return props.usersNews.deleteCommentsNews() 
     },[])
 
     return (
