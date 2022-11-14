@@ -47,7 +47,7 @@ const PageNews = (props) => {
                     </div>                   
                 </div>
                 <div className={classes.pagenews_comment}>
-                    <span>счетчик комментариев({props.usersNews.main.commentsParent.length})</span>
+                    <span>Comments({props.usersNews.main.commentsParent.length})</span>
                 </div>
             </div>
             <div className={classes.button_comments}>

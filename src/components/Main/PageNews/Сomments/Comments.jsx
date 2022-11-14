@@ -13,7 +13,7 @@ const Comments = (props) => {
                 <span>{e}</span>
             </div>
             <div>
-                <span className={classes.logo_comments_comments}>Комментарии(0)</span>
+                <span className={classes.logo_comments_comments}>Comments(0)</span>
             </div> 
         </div>
     )
