@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import MainScreen from "./MainScreen.jsx"
-import { setNews } from "../../../bll/mainScreen-reducer.js";
+
 
 let mapStateToProps = (state) => {
     return {
