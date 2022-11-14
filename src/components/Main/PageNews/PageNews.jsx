@@ -14,10 +14,7 @@ import "antd/dist/antd.css";
 
 const PageNews = (props) => {
 
-    console.log(props)
-
     let userNews = props.usersNews.main.userNews;
-    console.log(userNews)
     
     useEffect(() =>{
         if(userNews.kids){

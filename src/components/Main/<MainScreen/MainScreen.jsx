@@ -11,9 +11,6 @@ import { Button } from 'antd';
 import "antd/dist/antd.css";
 
 
-
-
- 
 const MainScreen = (props) => {
 
     function giveNews(id){

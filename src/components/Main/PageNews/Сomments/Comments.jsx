@@ -4,8 +4,6 @@ import mainLogo from '../../../../assets/img/main-logo.png'
 
 const Comments = (props) => {
 
-    console.log(props)
-
     let comments = props.comments
 
     let comment = comments.map((e) => (
