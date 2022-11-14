@@ -5,6 +5,10 @@ import Comments from './Сomments/Comments.jsx';
 import { getComments } from "../../../api/api.js";
 import {timeConverter} from '../../../utilits/timeConverter.js';
 import { useEffect } from "react";
+import { Button } from "antd";
+import "antd/dist/antd.css";
+
+
 
 
 
@@ -29,6 +33,7 @@ const PageNews = (props) => {
 
     return (
         <div className={classes.pagenews_wrapper}>
+            
             <div className={classes.pagenews}>
                 <div className={classes.pagenews_title}>
                     <h2>{userNews.title}</h2>
@@ -49,10 +54,11 @@ const PageNews = (props) => {
                 </div>
             </div>
             <div className={classes.button_comments}>
-                <button>Обновить комментарии</button>
+                <Button>UPDATE COMMENTS</Button>
             </div>
-            <Comments comments={props}/>
-            <div><NavLink to="/">Назад</NavLink></div>
+            <Comments comments={props.usersNews.main.commentsParent}/>
+            
+            <div><NavLink to="/"><Button>BACK</Button></NavLink></div>
         </div>
     )
 }

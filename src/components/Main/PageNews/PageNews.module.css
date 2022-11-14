@@ -1,3 +1,9 @@
+button {
+    font-family: "HackedRegular";
+    font-size: 20px;
+    height: 50px;
+}
+
 .pagenews {
     width: 100%;
     height: 100%;

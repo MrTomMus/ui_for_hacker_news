@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
-import MainScreen from "./<MainScreen/MainScreen.jsx";
+import React, { useEffect } from 'react';
+import MainScreen from './<MainScreen/MainScreen.jsx';
 import classes from './Main.module.css';
-import PageNews from "./PageNews/PageNews";
+import PageNews from './PageNews/PageNews';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { getIdNews, getNews }  from '../../api/api.js'
+import 'antd/dist/antd.css';
+import { Spin } from 'antd';
 
 
 const Main = (props) => {
 
-   console.log(props)
+   
 
     useEffect(() => {
         getIdNews()
@@ -22,15 +24,14 @@ const Main = (props) => {
             }
         });
     },[])
-  
-    console.log(props)
+     
     return (
             <div className={classes.main}>
                 <div className={classes.container}>  
                 <Router>
                     <Switch>
-                        <Route exact path={'/'} render={() => props.main.newsPosts.length == 100 ? <MainScreen users={props}/> : <div className={classes.load}>Loading...</div>}/>
-                        <Route  path={'/2'} render={() => props.main.userNews && props.main.userNews.title === props.main.userNews.title ? <PageNews usersNews={props}/> : <div className={classes.load}>Loading...</div>}/>
+                        <Route exact path={'/'} render={() => props.main.newsPosts.length == 100 ? <MainScreen users={props}/> : <div className={classes.load}>Loading...<Spin size="large"/></div>}/>
+                        <Route  path={'/newsPage'} render={() => props.main.userNews ? <PageNews usersNews={props}/> : <div className={classes.load}>Loading...<Spin size="large"/></div>}/>
                     </Switch>      
                 </Router>
                 </div>

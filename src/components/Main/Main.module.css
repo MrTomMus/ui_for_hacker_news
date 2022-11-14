@@ -11,5 +11,9 @@
     text-align: center;
     font-size: 100px;
     font-family: "HackedRegular";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 

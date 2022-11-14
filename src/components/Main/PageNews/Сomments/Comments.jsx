@@ -4,7 +4,9 @@ import mainLogo from '../../../../assets/img/main-logo.png'
 
 const Comments = (props) => {
 
-    let comments = props.comments.usersNews.main.commentsParent
+    console.log(props)
+
+    let comments = props.comments
 
     let comment = comments.map((e) => (
         <div key={e} className={classes.logo_comments}>

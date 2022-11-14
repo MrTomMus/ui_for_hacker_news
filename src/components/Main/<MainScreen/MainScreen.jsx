@@ -1,29 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import classes from './MainScreen.module.css';
 import newsLogo from '../../../assets/img/news.png'
 import authorLogo from '../../../assets/img/author.png'
 import scopeLogo from '../../../assets/img/scope.png'
 import timeLogo from '../../../assets/img/time.png'
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 import {timeConverter} from '../../../utilits/timeConverter.js'
-import { getIdNews, getNews }  from '../../../api/api.js'
+import { getNews }  from '../../../api/api.js'
+import { Button } from 'antd';
+import "antd/dist/antd.css";
+
 
 
 
  
 const MainScreen = (props) => {
 
-   console.log(props)
-    
     function giveNews(id){
         getNews(id)
             .then(data => {
                 props.users.setUserNews(data.data)
+                
             })
     }
-   
+    
     let post = props.users.main.newsPosts.map((e, id) => (
-        <NavLink to="/2" key={e.id} className={classes.posts_link} onClick={() => giveNews(e.id)}>
+        
+        <NavLink to={`/newsPage/${e.id}`} key={e.id} className={classes.posts_link} onClick={() => giveNews(e.id)}>
             <div className={classes.posts}>
                 <div className={classes.post}>
                     <div className={classes.post_title}>
@@ -50,10 +53,12 @@ const MainScreen = (props) => {
     ))
 
     return (
-        <div>
-            {
-               post 
-            }
+        
+        <div className={classes.container_main}>
+            <div className={classes.update_news_button}>
+                <Button onClick={() => window.location.reload()}>UPDATE NEWS</Button>
+            </div>
+            <div>{ post }</div>      
         </div>
         
     )

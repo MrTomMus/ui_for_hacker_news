@@ -16,8 +16,9 @@ const mainReducer = (state = inicialState, action) => {
         case SET_NEWS: {
             return {
                 ...state,
-                newsPosts: [...state.newsPosts, action.data]
+                newsPosts: [...state.newsPosts.sort((a,b) => b.time-a.time), action.data]
             }
+            
         }
         case SET_USER_NEWS: {
             return {
@@ -35,7 +36,6 @@ const mainReducer = (state = inicialState, action) => {
         
             return {
                 ...state,
-                userNews: 'f',
                 commentsParent: [],
             }
         }
