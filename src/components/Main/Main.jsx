@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import MainScreen from './<MainScreen/MainScreen.jsx';
+import MainScreen from './MainScreen/MainScreen.jsx';
 import classes from './Main.module.css';
 import PageNews from './PageNews/PageNews';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';

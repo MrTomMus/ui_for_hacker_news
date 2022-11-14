@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import classes from './MainScreen.module.css';
 import newsLogo from '../../../assets/img/news.png'
 import authorLogo from '../../../assets/img/author.png'
