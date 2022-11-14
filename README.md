@@ -1,5 +1,7 @@
 # Запуск приложения Hacker News через yarn
 
+yarn install
+
 yarn start
 
 ### О приложении
